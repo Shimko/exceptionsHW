@@ -11,7 +11,10 @@ public class Exceptions {
         try {
             checkArray(arr);
         }catch (MyArrayDataException e){
-            System.out.println("  Невозможно подсчитать сумму, введены некорректные данные!!!");
+            e.printStackTrace();
+            System.out.println(" Невозможно подсчитать сумму, введены некорректные данные!!!");
+        }catch (MySizeArrayException e){
+            e.printStackTrace();
         }
     }
     public static void checkArray(String[][] a) throws MySizeArrayException, MyArrayDataException {
